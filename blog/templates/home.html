@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Blogging Website</title>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+     
+    <style>
+    .container{
+      margin-top: 10vh;
+    }  
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="card style="width: 18rem;>
+              <h1 class="card-title mb-4 display-4 text-primary text-center mt-3">Introducing to Mansoon's Blogging</h1>
+               <p class="card-text p-3 mt-3">
+                 
+Welcome to your new favorite destination for sharing ideas, stories, and reflections — a vibrant blogging platform designed to bring your thoughts to life and connect you with a community of like-minded readers and writers.
+<br>
+Our blogging website is not just a place to write, but a space to express yourself fully and creatively. Whether you're an aspiring author, a passionate storyteller, or someone who simply loves sharing experiences, this platform was built with you in mind. Here, you can add your own blogs on topics you care about, explore diverse viewpoints through other users' writings, and engage deeply with content that resonates with you.
+</p>
+                <div class="card-body">
+                    {% load static %}
+                    <img src="{% static 'images/group_discussions.jpg' %}" class="card-img-top " alt="">
+                     <p class="card-text p-3 mt-3">
+<br>
+The heart of this website lies in its flexibility and user-friendliness. Adding a blog is straightforward and intuitive, enabling you to focus more on your message and less on technicalities. Your blogs become your digital canvas—paint with words, share your knowledge, insights, or anecdotes, and build your unique voice. From personal memoirs to professional guidance, from creative fiction to detailed tutorials, the possibilities are endless. Best of all, your content is available for anyone in our community to read, comment on, and learn from, fostering a rich, interactive environment.
+
+<br> <br>
+<i>Join us today and become part of a growing community where your voice matters and your stories find their audience. Start by adding your first blog or thought, and dive into an exciting world of ideas waiting to be discovered. Happy blogging!</i>
+</p>
+    <a href="/blog/about/" class="btn btn-primary">More...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% include 'footer.html' %}
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
+
+
+
+

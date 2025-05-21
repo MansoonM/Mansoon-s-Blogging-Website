@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+  }
+
+  h1{
+    color: rgb(82, 82, 255);
+  }
+ 
+  textarea{
+    height: 6rem;
+  }
+  h3{
+    margin: 3rem;
+    color: rgb(111, 111, 233);
+   
+  }
+  p{
+    padding: 1rem 1rem;
+  }
+  .check{
+  width: 100%;
+}
+img{
+  margin-top: 2rem;
+  height: 60%;
+  width: 70%;
+}
+</style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Add new blog</title>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+<!-- <h1 class="text-center mt-3">Add Blogs</h1> -->
+ <!-- {% load static %}
+    <img src="{% static 'images/our_employee.jpg' %}" class="card-img-top mb-3" alt="" class="mt-3" style="width: 70%;"> -->
+<div class="container text-center">
+  <div class="card p-3 m-3">
+
+  
+
+  <h1 class="display-4 text-primary">Add Blogs</h1>
+  <p>
+    Welcome to the "Add Blog" page of our blogging platform! This is your space to share your thoughts, experiences, and insights with a community of readers eager to engage with your content. Whether you are an aspiring writer, a seasoned blogger, or someone who simply wants to express their ideas, this page provides you with the tools you need to create and publish your blog posts effortlessly.
+
+<h1 class="display-6">Why Blog?</h1>
+Blogging is a powerful way to communicate your ideas and connect with others. It allows you to share your unique perspective on various topics, from personal experiences and hobbies to professional insights and industry trends. By writing a blog, you not only express yourself but also contribute to a larger conversation, inspire others, and potentially build a following of readers who appreciate your voice.
+
+Getting Started
+To begin writing your blog, simply fill out the form provided on this page. The form consists of two main fields: your username and the content of your blog. Let’s break down each section to help you understand how to use it effectively.
+<br>
+<h3>1. Username</h3>
+The first field you will encounter is the username input. This is where you enter the name you want to be associated with your blog post. Your username is important because it identifies you as the author and helps readers connect with your content. Make sure to choose a username that reflects your personality or the theme of your blog.
+<br>
+{% load static %}
+    <img src="{% static 'images/helping_hand.jpg' %}" class="card-img-top mb-3" alt="" class="mt-3">
+
+    <br>
+<h3>2. Blog Content</h3>
+The second and most significant part of the form is the textarea where you will write your blog post. This is your canvas to express your thoughts, and we encourage you to be creative! Here are some tips to help you craft an engaging blog post:
+
+Start with a Strong Title: A compelling title grabs the reader's attention and gives them a glimpse of what your blog is about. Make it catchy and relevant to the content you are writing.
+
+Structure Your Post: A well-structured blog is easier to read and understand. Consider using the following format:
+
+Introduction: Begin with an introduction that outlines the main topic of your blog. This sets the stage for your readers and piques their interest.
+Body: In the body of your blog, elaborate on your main points. Use paragraphs to separate different ideas, and consider using bullet points or numbered lists for clarity.
+Conclusion: Wrap up your blog with a conclusion that summarizes your key points or offers a final thought. This leaves readers with a clear understanding of your message.
+Be Authentic: Write in your own voice and be genuine. Readers appreciate authenticity, and sharing your personal experiences can make your blog more relatable and engaging.
+
+Use Visuals: If applicable, consider including images or videos to complement your text. Visuals can enhance your blog and make it more appealing to readers.
+<br>
+{% load static %}
+    <img src="{% static 'images/notepad.jpg' %}" class="card-img-top mb-3" alt="" class="mt-3">
+    <br>
+<h3>3. Review and Submit</h3>
+Once you have written your blog post, take a moment to review it. Check for spelling and grammatical errors, and ensure that your ideas flow logically. A well-edited blog enhances your credibility as a writer and makes for a better reading experience.
+
+When you are satisfied with your blog, look for the "Submit" button at the bottom of the form. Clicking this button will send your blog for review or publication, depending on the platform's settings. After submission, you should see a confirmation message indicating that your blog has been successfully submitted.
+<br>
+{% load static %}
+    <img src="{% static 'images/notepad_and_pen.jpg' %}" class="card-img-top mb-3" alt="" class="mt-3">
+    <br>
+<h3>4. Engage with Your Readers</h3>
+After your blog is published, be sure to check for any comments or feedback from readers. Engaging with your audience can enhance your blogging experience and help you build a community around your content. Responding to comments shows that you value your readers' opinions and encourages further interaction.
+  </p>
+<br>
+</div>
+
+  </div>
+
+
+
+<div class="container mt-3">
+<div class="card check">
+  <div class="card-body">
+   
+<form action="/add_blog/" method="post" >
+
+ {% csrf_token %}
+<h1 class="text-center">Add Blog</h1>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Write your full name</label>
+  <input type="text" name="username" class="form-control" id="exampleFormControlInput1">
+</div>
+
+  <div class="input-group">
+  <span class="input-group-text">Write your blog</span>
+  <textarea class="form-control" aria-label="With textarea" name="textarea"></textarea>
+</div>
+
+<div class="form-check mt-3">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="check">
+  <label class="form-check-label" for="flexCheckDefault">
+    I'm not a robot.
+  </label>
+</div>
+
+  <button class="btn btn-primary btn-sm mt-3" type="submit">Submit</button>
+
+<!-- <button class="btn btn-primary btn-sm">Submit</button> -->
+</form>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+{% include 'footer.html' %}
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

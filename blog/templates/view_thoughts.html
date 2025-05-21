@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+  .container{
+    margin-top: 12vh;
+  }
+</style>
+    <title>View Thoughts</title>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+   <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title mb-4 display-4 text-primary text-center mt-3">Built-in Thoughts By Admin</h1>
+{% load static %}
+
+<!-- <img src="{% static 'images/notepad.jpg' %}" class="card-img-top mt-3 mb-3"  alt=""> -->
+
+<p class="text-center">
+  Today is a new opportunity to chase your dreams.
+Consistency is the key to unlocking your potential.
+Small steps lead to big achievements; start today.
+Embrace challenges as opportunities for growth.
+Focus on progress, not perfection.
+Your mindset shapes your reality; think positively.
+Discipline today leads to success tomorrow.
+Set clear goals and take action to achieve them.
+Every effort counts; no action is too small.
+Believe in yourself and your ability to succeed.
+Stay committed to your goals, even when it’s tough.
+A positive attitude can change your entire day.
+Visualize your success and work towards it.
+Surround yourself with people who inspire you.
+Take time to reflect on your achievements.
+Consistency builds habits; habits lead to success.
+Don’t wait for motivation; create it within yourself.
+Each day is a chance to improve and grow.
+Focus on what you can control and let go of the rest.
+Celebrate small victories; they lead to bigger ones.
+Stay organized to maximize your productivity.
+Prioritize your tasks to stay focused and efficient.
+Remember why you started; let that fuel your journey.
+Take breaks to recharge; balance is essential.
+Learn from failures; they are stepping stones to success.
+Keep pushing your limits; growth happens outside your comfort zone.
+Stay curious and open to new ideas and experiences.
+Your hard work today will pay off in the future.
+Embrace a growth mindset; challenges are opportunities.
+Stay disciplined in your routines; they create stability.
+Focus on solutions, not problems.
+Surround yourself with positivity and encouragement.
+Take pride in your efforts, no matter the outcome.
+Consistency is more important than intensity.
+<img src="{% static 'images/notepad.jpg' %}" class="card-img-top mt-3 mb-3"  alt="">
+<pre class="text-center">
+  <h3 class="card-title mb-4 display-4 text-primary text-center mt-3">Our Thoughts</h3>
+<ul class="square" style="font-style: italic; font-family: Arial, Helvetica, sans-serif; font-size: medium; list-style: none;">
+<li>Set daily intentions to guide your actions</li>
+<li>Keep a gratitude journal to maintain a positive outlook.</li>
+<li>Invest in yourself; your growth is worth it.</li>
+<li>Stay adaptable; flexibility is key to success.</li>
+<li>Seek feedback and use it to improve.</li>
+<li>Remember that success is a journey, not a destination.</li>
+<li>Take responsibility for your actions and choices.</li>
+<li>Stay committed to lifelong learning and self-improvement.</li>
+<li>Focus on your strengths and leverage them.</li>
+<li>Don’t compare your journey to others; everyone’s path is unique.</li>
+<li>Practice mindfulness to stay present and focused.</li>
+<li>Keep your vision clear; it will guide your actions.</li>
+<li>Embrace the process; enjoy the journey to success.</li>
+<li>Stay persistent; resilience is a powerful trait.</li>
+<li>Make today count; every moment is an opportunity.</li>
+<li>Believe in your potential; you are capable of greatness.</li>
+</ul>
+</pre>
+<i>[mobile: if not visisble then scroll towards your right to left]</i>
+<hr>
+</p>
+
+<p class="mt-3">
+<div class="card">
+  <div class="card-body">
+      <pre class="text-center">
+    Soul:
+
+In some corner of walls, 
+I found my soul hanging.
+At the top of mountain and hills,
+I went and started screaming.
+
+There was echo all around,
+Then there, their voice I found.
+I was still looking around,
+To get something to be found.
+
+I wish my soul to get free,
+From that walls that hanged me.
+Then I want to fly high and high,
+Just like an eagle and butterfly.
+
+___Mansoon Mohanty 
+
+  </pre>
+  </div>
+</div>
+</p>
+
+<hr>
+
+
+<h1 class="card-title mb-4 display-4 text-primary text-center mt-3">Thoughts by Users</h1>
+
+
+
+  {% for t in thoughts %}
+      
+<hr>
+  <h1 class="card-title mb-4 display-6 text-primary text-center mt-3">{{forloop.counter}}. This blog is written by {{t.name}} </h1>
+  <br>
+  <h5 class="text-center">{{t.thought}}</h5>
+  <p class="mt-3 mb-3">Thank You!
+  <br>
+  Author: {{t.name}}
+</p>
+
+
+      {% endfor %}
+<hr>
+
+<h1 class="card-title mb-4 display-4 text-primary text-center mt-3" >Blogs in Table Format</h1>
+  <table class="table mb-3">
+    <thead>
+      <tr>
+        <th>Sl no.</th>
+        <th>Name</th>
+        <th>Thoughts</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in thoughts %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{t.name}}</td>
+        <td>{{t.thought}}</td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+<br> <br>
+<p class="text-primary">Welcome to the community. Welcome home.</p>
+
+        <p>
+          As we come to the end of this post, I want to take a moment to genuinely thank you for being here and sharing your precious time with me. In a world full of noise and distractions, finding a place where we can connect, learn, and grow together means more than words can express. This blog is not just a space for ideas and stories; it is a community—one built on curiosity, kindness, and the shared desire to live a richer, more inspired life.
+<br>
+
+<img src="{% static 'images/assignment_paper.jpg' %}" class="card-img-top mt-3 mb-3"  alt="">
+<br>
+Whether you’re here to find motivation, explore new perspectives, or simply enjoy a thoughtful read, I hope you’ve found something meaningful or uplifting today. Every post is crafted with the hope that it sparks a little light—a spark that fuels your own journey, whatever that may look like. Here, you’re never just a visitor; you’re part of an ongoing conversation, an evolving story where your thoughts and experiences matter as much as mine.
+
+I invite you to come along with me on this adventure. If any of what you read resonates with you, please don’t hesitate to join us. There’s a special kind of magic that happens when people gather with open hearts and curious minds. Together, we can create a support system that empowers us to overcome challenges, celebrate victories, and keep pushing forward with purpose and passion.
+<br><br>
+Joining this community means more than just reading posts. It’s about engaging with one another, sharing your stories, your questions, and even your doubts—because that’s where true growth happens. It’s about building connections that inspire, uplift, and remind us we’re not alone on this path. I encourage you to subscribe, to comment, and to reach out. Your voice adds richness and depth to this space, making it a vibrant and welcoming home for everyone.
+<br><br>
+<img src="{% static 'images/corporate_girl_profile.jpg' %}" class="card-img-top mt-3 mb-3"  alt="">
+<br>
+As we continue to explore new ideas, share experiences, and inspire each other, your participation will be the heartbeat that keeps this blog alive and thriving. Every new perspective you bring, every insight you share, contributes to a collective wisdom that benefits us all.
+
+So please, join us. Let’s create a community where inspiration flows freely, motivation thrives, and disciplined actions turn dreams into realities. Together, we can embrace the beauty of growth, the power of connection, and the joy of continuous learning.
+<br><br>
+<i>Thank you again for being here. I look forward to walking this journey with you, discovering new horizons, and creating something truly meaningful—together.
+
+Welcome to the community. Welcome home.</i>
+        </p>
+      </div>
+    </div>
+   </div>
+
+{% include 'footer.html' %}
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

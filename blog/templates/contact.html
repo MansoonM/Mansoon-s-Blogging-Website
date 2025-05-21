@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+  .contact{
+    margin-left: 44%;
+  }
+  .containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
+  }
+  .card{
+    width: 90%;
+  }
+</style>
+    <title>Contact Us</title>
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+<div class="container containers">
+  <div class="card">
+  <div class="card-body">
+    <form action="/contact/" method="post" >
+
+{% csrf_token %}
+<h1 class="card-title mb-4 display-4 text-primary text-center mt-3">Contact</h1>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Enter your Name</label>
+  <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Enter your Email</label>
+  <input type="email" name="email" class="form-control" id="exampleFormControlInput1">
+</div>
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Write your Phone Number</label>
+  <input type="number" name="number" class="form-control" id="exampleFormControlInput1">
+</div>
+
+  <div class="input-group">
+  <span class="input-group-text">Feedback</span>
+  <textarea class="form-control" aria-label="With textarea" name="feedback"></textarea>
+</div>
+
+  <button class="btn btn-primary btn-sm mt-3 contact" type="submit">Contact</button>
+
+<!-- <button class="btn btn-primary btn-sm">Submit</button> -->
+</form>
+  </div>
+</div>
+</div>
+
+{% include 'footer.html' %}
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
